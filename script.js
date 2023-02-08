@@ -1,18 +1,5 @@
 const emoji = document.querySelector('.emoji');
-if (!emoji) {
-  console.error('The emoji element could not be found');
-  return;
-}
-
-const sound = document.getElementById("sound");
-if (!sound) {
-  console.error('The sound element could not be found');
-  return;
-}
-
-emoji.addEventListener("click", function() {
-  sound.play();
-});
+const text = document.querySelector('#text');
 
 let isDragging = false;
 let currentX;
@@ -23,17 +10,15 @@ let xOffset = 0;
 let yOffset = 0;
 
 emoji.addEventListener("mousedown", dragStart);
-emoji.addEventListener("mouseup", dragEnd);
-emoji.addEventListener("mouseout", dragEnd);
-emoji.addEventListener("mousemove", drag);
+document.addEventListener("mouseup", dragEnd);
+document.addEventListener("mouseout", dragEnd);
+document.addEventListener("mousemove", drag);
 
 function dragStart(e) {
   initialX = e.clientX;
   initialY = e.clientY;
-  currentX = initialX;
-  currentY = initialY;
-  xOffset = currentX - initialX;
-  yOffset = currentY - initialY;
+  xOffset = emoji.offsetLeft - initialX;
+  yOffset = emoji.offsetTop - initialY;
   isDragging = true;
 }
 
@@ -48,6 +33,4 @@ function drag(e) {
     currentY = e.clientY + yOffset;
 
     emoji.style.top = currentY + "px";
-    emoji.style.left = currentX + "px";
-  }
-}
+    emoji.style.
