@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows 95 Emoji</title>
     <style>
       body {
-        background-color: #3f3f3f;
+        background-color: #EDC3BE;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         height: 100vh;
       }
 
@@ -19,31 +16,56 @@
         height: 50px;
         font-size: 3em;
         user-select: none;
-        cursor: grab;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .emoji:hover {
+        transform: scale(1.1);
+      }
+
+      .text {
+        position: absolute;
+        bottom: 60px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .button {
+        background-color: #fff;
+        border: 1px solid #000;
+        padding: 10px 20px;
+        margin: 0 10px;
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #000;
+        color: #fff;
       }
     </style>
   </head>
   <body>
     <div class="emoji">😀</div>
-
-        <div class="window">
-      <div class="title-bar">
-        <div class="title-bar-text">Explorer</div>
-        <div class="title-bar-controls">
-          <button class="minimize-button"></button>
-          <button class="maximize-button"></button>
-          <button class="close-button"></button>
-        </div>
-      </div>
-      <div class="window-body">
-        <Big poop>
-      </div>
+    <div class="text">Hello, world!</div>
+    <div class="buttons">
+      <a class="button" href="#">Button 1</a>
+      <a class="button" href="#">Button 2</a>
+      <a class="button" href="#">Button 3</a>
     </div>
-    
-    <audio id="sound" src="sound.mp3"></audio>
 
     <script>
-      const emoji = document.querySelector('.emoji');
+      const emoji = document.querySelector(".emoji");
       let isDragging = false;
       let currentX;
       let currentY;
@@ -56,7 +78,6 @@
       emoji.addEventListener("mouseup", dragEnd);
       emoji.addEventListener("mouseout", dragEnd);
       emoji.addEventListener("mousemove", drag);
-      emoji.addEventListener("click", playSound);
 
       function dragStart(e) {
         initialX = e.clientX;
@@ -79,12 +100,6 @@
           emoji.style.top = currentY + "px";
           emoji.style.left = currentX + "px";
         }
-      }
-
-      function playSound() {
-        const sound = document.getElementById("sound");
-        sound.currentTime = 0;
-        sound.play();
       }
     </script>
   </body>
