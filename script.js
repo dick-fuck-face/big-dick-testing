@@ -5,6 +5,10 @@ if (!emoji) {
 }
 
 const sound = document.getElementById("sound");
+if (!sound) {
+  console.error('The sound element could not be found');
+  return;
+}
 
 emoji.addEventListener("click", function() {
   sound.play();
@@ -26,6 +30,8 @@ emoji.addEventListener("mousemove", drag);
 function dragStart(e) {
   initialX = e.clientX;
   initialY = e.clientY;
+  currentX = initialX;
+  currentY = initialY;
   xOffset = currentX - initialX;
   yOffset = currentY - initialY;
   isDragging = true;
