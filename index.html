@@ -1,59 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      body {
-        background-color: #EDC3BE;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .emoji {
-        position: relative;
-        width: 50px;
-        height: 50px;
-        font-size: 3em;
-        user-select: none;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .emoji:hover {
-        transform: scale(1.1);
-      }
-
-      .text {
-        position: absolute;
-        bottom: 60px;
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        width: 100%;
-      }
-
-      .buttons {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      .button {
-        background-color: #fff;
-        border: 1px solid #000;
-        padding: 10px 20px;
-        margin: 0 10px;
-        text-decoration: none;
-        color: #000;
-        cursor: pointer;
-      }
-
-      .button:hover {
-        background-color: #000;
-        color: #fff;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
     <div class="emoji">😀</div>
@@ -63,44 +12,5 @@
       <a class="button" href="#">Button 2</a>
       <a class="button" href="#">Button 3</a>
     </div>
-
-    <script>
-      const emoji = document.querySelector(".emoji");
-      let isDragging = false;
-      let currentX;
-      let currentY;
-      let initialX;
-      let initialY;
-      let xOffset = 0;
-      let yOffset = 0;
-
-      emoji.addEventListener("mousedown", dragStart);
-      emoji.addEventListener("mouseup", dragEnd);
-      emoji.addEventListener("mouseout", dragEnd);
-      emoji.addEventListener("mousemove", drag);
-
-      function dragStart(e) {
-        initialX = e.clientX;
-        initialY = e.clientY;
-        xOffset = currentX - initialX;
-        yOffset = currentY - initialY;
-        isDragging = true;
-      }
-
-      function dragEnd(e) {
-        isDragging = false;
-      }
-
-      function drag(e) {
-        if (isDragging) {
-          e.preventDefault();
-          currentX = e.clientX + xOffset;
-          currentY = e.clientY + yOffset;
-
-          emoji.style.top = currentY + "px";
-          emoji.style.left = currentX + "px";
-        }
-      }
-    </script>
   </body>
 </html>
