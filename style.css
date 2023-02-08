@@ -8,39 +8,77 @@ body {
 }
 
 .emoji {
-  font-size: 64px;
-  width: 64px;
-  height: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 48px;
   position: relative;
-  cursor: grab;
+  transition: all 0.2s ease-in-out;
 }
 
 .emoji:hover {
-  transform: scale(1.25);
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .text {
-  font-size: 32px;
+  font-size: 24px;
+  margin-top: 24px;
+  z-index: -1;
   position: absolute;
-  bottom: 100px;
-  text-align: center;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .button {
-  padding: 8px 16px;
-  border-radius: 4px;
   background-color: #EDC3BE;
+  border: none;
   color: white;
+  padding: 12px 24px;
+  text-align: center;
   text-decoration: none;
-  margin: 0 8px;
+  display: inline-block;
+  margin-right: 16px;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #F9D9D2;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.twitter-logo {
+  background-image: url('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-twitter-square2-512.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.substack-logo {
+  background-image: url('https://avatars2.githubusercontent.com/u/44076339?s=400&v=4');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.palm-tree-logo {
+  background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/palm-tree_1f334.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
 }
