@@ -1,60 +1,46 @@
 body {
-  background-color: #EDC3BE;
+  background: linear-gradient(to top, #EDC3BE, white);
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
-#emoji {
-  position: absolute;
-  z-index: 9;
-  background-color: #f1f1f1;
-  border: 1px solid #d3d3d3;
-  text-align: center;
-}
-
-#emoji {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
+.emoji {
+  font-size: 64px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: grab;
 }
 
 .emoji:hover {
-  transform: scale(1.2);
+  transform: scale(1.25);
 }
 
 .text {
+  font-size: 32px;
   position: absolute;
-  bottom: 0;
-  font-size: 2em;
+  bottom: 100px;
   text-align: center;
   width: 100%;
-  z-index: -1;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 32px;
 }
 
 .button {
-  background-color: transparent;
-  border: 2px solid #333;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: all 0.2s;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #EDC3BE;
+  color: white;
   text-decoration: none;
-  color: #333;
-}
-
-.button:hover {
-  background-color: #333;
-  color: #EDC3BE;
+  margin: 0 8px;
 }
