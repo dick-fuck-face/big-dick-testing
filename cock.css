@@ -1,8 +1,6 @@
 .emoji {
-  font-size: 2em;
-  transition: transform 0.5s;
-}
-
-.emoji:hover {
-  transform: rotate(360deg);
+  ...
+  position: absolute;
+  top: 0;
+  left: 0;
 }
