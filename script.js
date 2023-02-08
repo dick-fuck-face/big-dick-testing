@@ -11,7 +11,6 @@ emoji.addEventListener("mousedown", dragStart);
 emoji.addEventListener("mouseup", dragEnd);
 emoji.addEventListener("mouseout", dragEnd);
 emoji.addEventListener("mousemove", drag);
-emoji.addEventListener("click", playSound);
 
 function dragStart(e) {
   initialX = e.clientX;
@@ -34,10 +33,4 @@ function drag(e) {
     emoji.style.top = currentY + "px";
     emoji.style.left = currentX + "px";
   }
-}
-
-function playSound() {
-  const sound = document.getElementById("sound");
-  sound.currentTime = 0;
-  sound.play();
 }
