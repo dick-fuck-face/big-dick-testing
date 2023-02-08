@@ -4,6 +4,13 @@ if (!emoji) {
   return;
 }
 
+const emoji = document.getElementById("emoji");
+  const sound = document.getElementById("sound");
+
+  emoji.addEventListener("click", function() {
+    sound.play();
+  });
+
 const emoji = document.querySelector('.emoji');
 let isDragging = false;
 let currentX;
