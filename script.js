@@ -1,4 +1,10 @@
 const emoji = document.querySelector('.emoji');
+if (!emoji) {
+  console.error('The emoji element could not be found');
+  return;
+}
+
+const emoji = document.querySelector('.emoji');
 let isDragging = false;
 let currentX;
 let currentY;
