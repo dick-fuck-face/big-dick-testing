@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 const box = document.querySelector("#box");
 const audio = new Audio("sound.mp3");
 
@@ -48,3 +50,5 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+});  
