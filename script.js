@@ -1,59 +1,43 @@
-const emoji = document.querySelector(".emoji");
-const text = document.querySelector(".text");
-const buttons = document.querySelectorAll(".button");
+// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
 
-let isDragging = false;
-let currentX;
-let currentY;
-let initialX;
-let initialY;
-let xOffset = 0;
-let yOffset = 0;
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
 
-emoji.addEventListener("mouseover", function() {
-  emoji.style.transform = "scale(1.2)";
-});
-
-emoji.addEventListener("mouseout", function() {
-  emoji.style.transform = "scale(1)";
-});
-
-emoji.addEventListener("mousedown", dragStart);
-emoji.addEventListener("mouseup", dragEnd);
-emoji.addEventListener("mouseout", dragEnd);
-emoji.addEventListener("mousemove", drag);
-
-function dragStart(e) {
-  initialX = e.clientX;
-  initialY = e.clientY;
-  xOffset = currentX - initialX;
-  yOffset = currentY - initialY;
-  isDragging = true;
-}
-
-function dragEnd(e) {
-  isDragging = false;
-}
-
-function drag(e) {
-  if (isDragging) {
+  function dragMouseDown(e) {
+    e = e || window.event;
     e.preventDefault();
-    currentX = e.clientX + xOffset;
-    currentY = e.clientY + yOffset;
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
 
-    emoji.style.top = currentY + "px";
-    emoji.style.left = currentX + "px";
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
   }
 }
-
-buttons.forEach(function(button) {
-  button.addEventListener("mouseover", function() {
-    button.style.transform = "scale(1.2)";
-    button.style.backgroundColor = "#FFC0CB";
-  });
-
-  button.addEventListener("mouseout", function() {
-    button.style.transform = "scale(1)";
-    button.style.backgroundColor = "pink";
-  });
-});
