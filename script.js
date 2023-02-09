@@ -1,6 +1,8 @@
-const emoji = document.querySelector(".emoji");
-const text = document.querySelector(".text");
-const buttons = document.querySelectorAll(".button");
+const emoji = document.querySelector("emoji");
+const text = document.querySelector("text");
+const buttons = document.querySelectorAll("button");
+const substack-logo = document.querySelectorAll("substack-logo");
+const twitter-logo = document.querySelectorAll("twitter-logo");
 
 let isDragging = false;
 let currentX;
