@@ -1,16 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 const box = document.querySelector("#box");
-const audioFiles = [
-  "https://github.com/dick-fuck-face/big-dick-testing/blob/main/audio/sound3.mp3",
-  "https://github.com/dick-fuck-face/big-dick-testing/blob/main/audio/sound2.mp3",
-  "https://github.com/dick-fuck-face/big-dick-testing/blob/main/audio/sound1.mp3"
-];
+const audioFolder = "https://api.github.com/repos/dick-fuck-face/big-dick-testing/contents/audio";
+  let audioFiles = [];
 
-const randomIndex = Math.floor(Math.random() * audioFiles.length);
-const randomAudioFile = audioFiles[randomIndex];
-const audio = new Audio(randomAudioFile);
-
+  fetch(audioFolder)
+    .then(res => res.json())
+    .then(data => {
+      audioFiles = data.map(file => file.download_url);
+    });
+  
+    box.addEventListener("click", function() {
+    if (audioFiles.length) {
+      const randomAudio = audioFiles[Math.floor(Math.random() * audioFiles.length)];
+      new Audio(randomAudio).play();
+    }
+  });
+});
 
 box.addEventListener("mouseover", function() {
   box.style.transform = "scale(1.2)";
@@ -20,9 +26,6 @@ box.addEventListener("mouseout", function() {
   box.style.transform = "scale(1)";
 });
 
-box.addEventListener("click", function() {
-  audio.play();
-});
 
 dragElement(document.getElementById("box"));
 
