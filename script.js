@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const box = document.querySelector("#box");
 const audioFiles = [
-  "sound.mp3",
-  "/audio/sound2.mp3",
-  "sound3.mp3"
+  "https://github.com/dick-fuck-face/big-dick-testing/blob/main/audio/sound3.mp3",
+  "https://github.com/dick-fuck-face/big-dick-testing/blob/main/audio/sound2.mp3",
+  "https://github.com/dick-fuck-face/big-dick-testing/blob/main/audio/sound1.mp3"
 ];
 
 const randomIndex = Math.floor(Math.random() * audioFiles.length);
