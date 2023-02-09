@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const randomSound = audioFolder + audioFiles[randomIndex];
     const audio = new Audio(randomSound);
+    audio.muted = true;
     audio.play();
   });
 
