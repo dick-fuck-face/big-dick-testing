@@ -9,7 +9,7 @@ body {
 
 .emoji {
   font-size: 48px;
-  position: absolute;
+  position: relative;
   transition: all 0.2s ease-in-out;
 }
 
@@ -57,16 +57,26 @@ body {
 }
 
 .twitter-logo {
-  background-image: url('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-twitter-square2-512.png');
+  background-image: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/twitter-app-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 48px;
   height: 48px;
   display: inline-block;
+}
+
+.twitter-logo:hover {
+  background-color: #F9D9D2;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.twitter-logo:last-child {
+  margin-right: 0;
 }
 
 .substack-logo {
-  background-image: url('https://avatars2.githubusercontent.com/u/44076339?s=400&v=4');
+  background-image: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/substack-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 48px;
@@ -74,11 +84,12 @@ body {
   display: inline-block;
 }
 
-.palm-tree-logo {
-  background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/palm-tree_1f334.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 48px;
-  height: 48px;
-  display: inline-block;
+.substack-logo:hover {
+  background-color: #F9D9D2;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.substack-logo:last-child {
+  margin-right: 0;
 }
