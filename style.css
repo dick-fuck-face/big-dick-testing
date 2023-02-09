@@ -91,3 +91,19 @@ body {
 .substack-logo:last-child {
   margin-right: 0;
 }
+
+.box {
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+-webkit-box-shadow: 8px 8px #000000;
+-moz-box-shadow: 8px 8px #000000;
+box-shadow: 8px 8px #000000;
+border: solid #000000;
+background-color: #EDC3BE;
+padding: 18px;
+font-family: Arial Narrow, sans-serif;
+font-size: 10pt;
+color: #000000;
+text-align: center;
+}
