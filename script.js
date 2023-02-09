@@ -1,7 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 const box = document.querySelector("#box");
-const audio = new Audio("sound.mp3");
+const audioFiles = [
+  "https://github.com/dick-fuck-face/big-dick-testing/blob/main/audio/sound1.mp3",
+  "big-dick-testing/audio/sound2.mp3",
+  "audio/sound3.mp3"
+];
+
+const randomIndex = Math.floor(Math.random() * audioFiles.length);
+const randomAudioFile = audioFiles[randomIndex];
+const audio = new Audio(randomAudioFile);
+
 
 box.addEventListener("mouseover", function() {
   box.style.transform = "scale(1.2)";
