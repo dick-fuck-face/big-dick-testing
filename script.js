@@ -34,3 +34,4 @@ function drag(e) {
 
     emoji.style.top = currentY + "px";
     emoji.style.
+  }
