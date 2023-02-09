@@ -1,27 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
+  const box = document.querySelector("#box");
+  const audioFolder = 'audio/';
+  const audioFiles = ['sound1.mp3', 'sound2.mp3', 'sound3.mp3'];
 
-const box = document.querySelector("#box");
-const audioFiles = [
-  "sound1.mp3",
-  "sound2.mp3",
-  "sound3.mp3"
-];
+  box.addEventListener("mouseover", function() {
+    box.style.transform = "scale(1.2)";
+  });
 
-const audio = new Audio();
-audio.src = `https://github.com/dick-fuck-face/big-dick-testing/tree/main/audio/${audioFiles[Math.floor(Math.random() * audioFiles.length)]}`;
-audio.play();
+  box.addEventListener("mouseout", function() {
+    box.style.transform = "scale(1)";
+  });
 
-box.addEventListener("mouseover", function() {
-  box.style.transform = "scale(1.2)";
-});
-
-box.addEventListener("mouseout", function() {
-  box.style.transform = "scale(1)";
-});
-
-box.addEventListener("click", function() {
-  audio.play();
-});
+  box.addEventListener("click", function() {
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const randomSound = audioFolder + audioFiles[randomIndex];
+    const audio = new Audio(randomSound);
+    audio.play();
+  });
 
 dragElement(document.getElementById("box"));
 
