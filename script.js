@@ -1,6 +1,6 @@
-const emoji = document.querySelector("emoji");
-const text = document.querySelector("text");
-const buttons = document.querySelectorAll("button");
+const emoji = document.querySelector(".emoji");
+const text = document.querySelector(".text");
+const buttons = document.querySelectorAll(".button");
 
 let isDragging = false;
 let currentX;
