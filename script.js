@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const box = document.querySelector("#box");
-  const audioFolder = 'audio/';
+  const audioFolder = 'https://github.com/dick-fuck-face/big-dick-testing/tree/main/audio';
   const audioFiles = ['sound1.mp3', 'sound2.mp3', 'sound3.mp3'];
 
   box.addEventListener("mouseover", function() {
