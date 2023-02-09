@@ -1,4 +1,4 @@
-const box = document.querySelector(".box");
+const box = document.querySelector("#box");
 const audio = new Audio("sound.mp3");
 
 box.addEventListener("mouseover", function() {
