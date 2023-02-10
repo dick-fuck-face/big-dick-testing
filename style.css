@@ -29,34 +29,6 @@ body {
 }
 
 .buttons {
-  display: flex;
-  margin-top: 24px;
-}
-
-.button {
-  background-color: #EDC3BE;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 16px;
-  border-radius: 30px;
-  transition: all 0.2s ease-in-out;
-}
-
-.button:hover {
-  background-color: #F9D9D2;
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-.button:last-child {
-  margin-right: 0;
-}
-
-.twitter-logo {
   position: absolute;
   bottom: calc(100vh / 4);
   display: flex;
@@ -71,6 +43,7 @@ body {
   width: 48px;
   height: 48px;
   display: inline-block;
+  transition: all 0.1s ease-in-out;
 }
 
 .twitter-logo:hover {
@@ -83,20 +56,13 @@ body {
 }
 
 .substack-logo {
-  position: absolute;
-  bottom: calc(100vh / 4);
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.substack-logo {
   background-image: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/substack-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 48px;
   height: 48px;
   display: inline-block;
+  transition: all 0.1s ease-in-out;
 }
 
 .substack-logo:hover {
