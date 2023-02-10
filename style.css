@@ -8,14 +8,24 @@ body {
 }
 
 .emoji {
-  font-size: 60px;
+  font-size: 69px;
   position: relative;
-  transition: all 0.2s ease-in-out;
+  display: block;
+  opacity: 1;
 }
 
 .emoji:hover {
-  cursor: pointer;
-  transform: scale(1.2);
+  animation: shake 0.08s ease-in-out alternate infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
 }
 
 .text {
@@ -76,35 +86,65 @@ body {
 }
 
 .box {
--webkit-border-radius: 12px;
--moz-border-radius: 12px;
-border-radius: 12px;
--webkit-box-shadow: 8px 8px #000000;
--moz-box-shadow: 8px 8px #000000;
-box-shadow: 8px 8px #000000;
-border: solid #000000;
-background-color: #EDC3BE;
-padding: 18px;
-font-family: Arial Narrow, sans-serif;
-font-size: 10pt;
-color: #000000;
-text-align: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 8px 8px #000000;
+  -moz-box-shadow: 8px 8px #000000;
+  box-shadow: 8px 8px #000000;
+  border: solid #000000;
+  background-color: #EDC3BE;
+  padding: 25px;
+  font-family: Arial Narrow, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+
+.box:hover {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 4px 4px #000000;
+  -moz-box-shadow: 4px 4px #000000;
+  box-shadow: 4px 4px #000000;
+  border: solid #000000;
+  background-color: #FFFFFF;
+  padding: 20px;
+  font-family: Arial Narrow, sans-serif;
+  font-size: 10pt;
 }
 
 .box2 {
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
--webkit-box-shadow: 8px 8px #000000;
--moz-box-shadow: 8px 8px #000000;
-box-shadow: 8px 8px #000000;
-border: solid #000000;
-background-color: #EDC3BE;
-padding: 18px;
-font-family: Arial Narrow, sans-serif;
-font-size: 10pt;
-color: #000000;
-text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 8px 8px #000000;
+  -moz-box-shadow: 8px 8px #000000;
+  box-shadow: 8px 8px #000000;
+  border: solid #000000;
+  background-color: #EDC3BE;
+  padding: 18px;
+  font-family: Arial Narrow, sans-serif;
+  font-size: 10pt;
+  color: #000000;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.box2:hover {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 4px 4px #000000;
+  -moz-box-shadow: 4px 4px #000000;
+  box-shadow: 4px 4px #000000;
+  border: solid #000000;
+  background-color: #FFFFFF;
+  padding: 15px;
+  font-family: Arial Narrow, sans-serif;
+  font-size: 10pt;
 }
 
 #box {
@@ -118,6 +158,6 @@ text-align: center;
 }
 
 #emoji {
-  position: relative;
+  position: absolute;
   z-index: 7;
 }
