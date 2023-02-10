@@ -56,35 +56,42 @@ body {
   margin-right: 0;
 }
 
-.logo-container {
+.twitter-logo {
   position: absolute;
-  bottom: calc(100vh / 3);
+  bottom: calc(100vh / 4);
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.logo {
+.twitter-logo {
+  background-image: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/twitter-app-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 48px;
   height: 48px;
   display: inline-block;
-  margin-right: 16px;
-  transition: all 0.2s ease-in-out;
 }
 
-.logo:hover {
+.twitter-logo:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.logo:last-child {
+.twitter-logo:last-child {
   margin-right: 0;
 }
 
-.twitter-logo {
-  background: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/twitter-app-icon.png');
+.substack-logo {
+  position: absolute;
+  bottom: calc(100vh / 4);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.substack-logo {
+  background-image: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/substack-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 48px;
@@ -92,13 +99,13 @@ body {
   display: inline-block;
 }
 
-.substack-logo {
-  background: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/substack-icon.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 48px;
-  height: 48px;
-  display: inline-block;
+.substack-logo:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.substack-logo:last-child {
+  margin-right: 0;
 }
 
 .box {
