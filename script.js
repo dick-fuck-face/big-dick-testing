@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const box = document.querySelector("#box, #box2, #emoji");
+  const box = document.querySelector("#box");
+  const box2 = document.querySelector("#box2");
+  const emoji = document.querySelector("#emoji");
   const audioFolder = "https://api.github.com/repos/dick-fuck-face/big-dick-testing/contents/audio";
   let audioFiles = [];
   let currentAudio;
@@ -31,6 +33,26 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   dragElement(document.getElementById("box"));
+  
+  box2.addEventListener("mouseover", function() {
+  box2.style.transform = "scale(1.2)";
+});
+
+  box2.addEventListener("mouseout", function() {
+  box2.style.transform = "scale(1)";
+});
+
+  dragElement(document.getElementById("box2"));
+  
+  emoji.addEventListener("mouseover", function() {
+  emoji.style.transform = "scale(1.2)";
+});
+
+  emoji.addEventListener("mouseout", function() {
+  emoji.style.transform = "scale(1)";
+});
+
+  dragElement(document.getElementById("emoji"));
 
   function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
