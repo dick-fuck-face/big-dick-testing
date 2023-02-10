@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const box = document.querySelector("#box");
+  const box = document.querySelector("#box, #box2, #emoji");
   const audioFolder = "https://api.github.com/repos/dick-fuck-face/big-dick-testing/contents/audio";
   let audioFiles = [];
   let currentAudio;
