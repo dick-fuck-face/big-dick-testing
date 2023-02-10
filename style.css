@@ -8,7 +8,7 @@ body {
 }
 
 .emoji {
-  font-size: 48px;
+  font-size: 60px;
   position: relative;
   transition: all 0.2s ease-in-out;
 }
@@ -19,13 +19,14 @@ body {
 }
 
 .text {
-  font-size: 24px;
+  font-size: 12px;
   margin-top: 24px;
   z-index: -1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: Arial Narrow, sans-serif;
 }
 
 .buttons {
@@ -90,7 +91,33 @@ color: #000000;
 text-align: center;
 }
 
+.box2 {
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 8px 8px #000000;
+-moz-box-shadow: 8px 8px #000000;
+box-shadow: 8px 8px #000000;
+border: solid #000000;
+background-color: #EDC3BE;
+padding: 18px;
+font-family: Arial Narrow, sans-serif;
+font-size: 10pt;
+color: #000000;
+text-align: center;
+}
+
 #box {
   position: absolute;
   z-index: 9;
+}
+
+#box2 {
+  position: absolute;
+  z-index: 8;
+}
+
+#emoji {
+  position: relative;
+  z-index: 7;
 }
