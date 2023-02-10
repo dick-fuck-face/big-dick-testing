@@ -30,10 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
     box.style.transform = "scale(1)";
   });
 
-  box.addEventListener("click", function() {
-    audio.play();
-  });
-
   dragElement(box);
 });
 
