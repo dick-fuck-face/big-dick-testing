@@ -84,11 +84,21 @@ body {
 }
 
 .twitter-logo {
-  background-image: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/twitter-app-icon.png');
+  background: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/twitter-app-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
 }
 
 .substack-logo {
-  background-image: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/substack-icon.png');
+  background: url('https://raw.githubusercontent.com/dick-fuck-face/big-dick-testing/main/substack-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
 }
 
 .box {
