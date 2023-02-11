@@ -113,7 +113,7 @@ body {
   background-color: #FFFFFF;
   padding: 20px;
   font-family: Arial Narrow, sans-serif;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 .box2 {
@@ -133,7 +133,24 @@ body {
   transition: all 0.3s ease;
 }
 
+.box2:hover span {
+  display: none;
+}
+
 .box2:hover {
+  -webkit-border-radius: -50px;
+  -moz-border-radius: -50px;
+  border-radius: -50px;
+  -webkit-box-shadow: -10px -10px #0000;
+  -moz-box-shadow: -10px -10px #0000;
+  box-shadow: -10px -10px #0000;
+  border: solid #0000;
+  background-color: #0000;
+  padding: 0px;
+}
+
+.box2:hover:after {
+  content: "Wait! Don't scare him!";
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -141,23 +158,41 @@ body {
   -moz-box-shadow: 4px 4px #000000;
   box-shadow: 4px 4px #000000;
   border: solid #000000;
-  background-color: #FFFFFF;
-  padding: 15px;
+  background-color: #FFED65;
+  padding: 18px;
   font-family: Arial Narrow, sans-serif;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 #box {
   position: absolute;
+  transition: transform 0.1s ease-out;
   z-index: 9;
 }
 
 #box2 {
   position: absolute;
+  transition: transform 0.1s ease-out;
   z-index: 8;
 }
 
 #emoji {
-  position: absolute;
-  z-index: 7;
+  font-size: 69px;
+  position: relative;
+  display: block;
+  opacity: 1;
+}
+
+#emoji:hover {
+  animation: shake 0.09s ease-in-out alternate infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
 }
